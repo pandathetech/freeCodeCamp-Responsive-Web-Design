@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bryan's Survey Form Project | FreeCodeCamp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Bryan's Food Preference Survey</h1>
+    <p id="description">I'd love to learn more about your food preferences. Please fill out my survey form below.</p>
+    <form id="survey-form">
+        <div class="information">
+            <label for="name" id="name-label">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="information">
+            <label for="email" id="email-label">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email address" required>
+        </div>
+        <div class="information">
+            <label for="number" id="number-label">Your Age</label>
+            <input type="number" id="number" name="number" placeholder="Enter your age" min="16" max="120">
+        </div>
+        <div class="information">
+            <label for="dropdown">Which meal of the day do you enjoy the most?</label>
+            <select id="dropdown" name="meal">
+                <option value="">(Select a meal)</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="no-preference">No preference</option>
+            </select>
+        </div>
+        <div class="information">
+            <p>How spicy do you like your food?</p>
+            <label><input type="radio" name="spice-level" value="none">No Spice</label>
+            <label><input type="radio" name="spice-level" value="mild">Mild</label>
+            <label><input type="radio" name="spice-level" value="medium">Medium</label>
+            <label><input type="radio" name="spice-level" value="hot">Hot</label>
+            <label><input type="radio" name="spice-level" value="extra-hot">Extra Hot</label>
+        </div>
+        <div class="information">
+            <p>What type of cuisine do you enjoy? (You can select multiple)</p>
+            <label><input type="checkbox" name="cuisine" value="american">American</label>
+            <label><input type="checkbox" name="cuisine" value="chinese">Chinese</label>
+            <label><input type="checkbox" name="cuisine" value="italian">Italian</label>
+            <label><input type="checkbox" name="cuisine" value="japanese">Japanese</label>
+            <label><input type="checkbox" name="cuisine" value="mexican">Mexican</label>
+            <label><input type="checkbox" name="cuisine" value="thai">Thai</label>
+        </div>
+        <div class="information">
+            <label for="additional-comments">Comments</label>
+            <textarea id="additional-comments" name="additional-comments" placeholder="Any feedback would be greatly appreciated."></textarea>
+        </div>
+        <div class="information">
+            <button id="submit" type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
