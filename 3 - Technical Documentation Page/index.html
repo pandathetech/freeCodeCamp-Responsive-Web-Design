@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bryan's Technical Documentation Project | FreeCodeCamp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header>Bash Documentation</header>
+    <a href="#Introduction" class="nav-link">Introduction</a>
+    <a href="#Variables" class="nav-link">Variables</a>
+    <a href="#Conditionals" class="nav-link">Conditionals</a>
+    <a href="#Loops" class="nav-link">Loops</a>
+    <a href="#Functions" class="nav-link">Functions</a>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>Bash is a Unix shell and command language used for scripting and automating tasks.</p>
+      <p>It is widely used in Linux systems for system administration and development tasks.</p>
+      <p>Bash scripts are plain text files that contain a series of commands to be executed.</p>
+      <code>#!/bin/bash</code>
+      <p>That line at the top tells your computer, "Hey, use Bash to run this script.".</p>
+      <p>Bash supports variables, conditionals, loops, and functions, just like other programming languages.</p>
+      <p>It is commonly used for tasks such as : </p>
+      <ul>
+        <li>Command automation</li>
+        <li>System maintenance</li>
+        <li>Task scheduling</li>
+        <li>Configuration scripts</li>
+        <li>Deployment scripts</li>
+      </ul>
+    </section>
+    <section class="main-section" id="Variables">
+      <header>Variables</header>
+      <p>Variables in Bash are used to store data like strings, numbers, or file paths.</p>
+      <p>You don't need to declare variable types; they are all treated as strings by default.</p>
+      <code>NAME="Bill"</code>
+      <code>echo "Hello, $NAME"</code>
+      <p>Environment variables can be accessed using the <span class="highlight">$</span> symbol, like <span class="highlight">$HOME</span> or <span class="highlight">$USER</span>.</p>
+      <p>Use <span class="highlight">export</span> to make variables available to child processes.</p>
+    </section>
+    <section class="main-section" id="Conditionals">
+      <header>Conditionals</header>
+      <p>Conditional statements let you execute code based on conditions.</p>
+      <p>Bash supports <span class="highlight">if</span>, <span class="highlight">else</span>, <span class="highlight">elif</span>, and <span class="highlight">case</span> statements.</p>
+      <code>
+        if [ "$NAME" = "Bill" ]; then<br>
+          echo "Hello Bill"<br>
+        else<br>
+          echo "You're not Bill"<br>
+        fi
+      </code>
+      <p>You can use test operators like <span class="highlight">-eq</span>, <span class="highlight">-ne</span>, <span class="highlight">-f</span>, <span class="highlight">-d</span>, etc., in your conditions.</p>
+    </section>
+    <section class="main-section" id="Loops">
+      <header>Loops</header>
+      <p>Loops allow you to repeat commands based on conditions or over a list of items.</p>
+      <p>Bash supports <span class="highlight">for</span>, <span class="highlight">while</span>, and <span class="highlight">until</span> loops.</p>
+      <code>
+        for i in 1 2 3; do<br>
+          echo "Number: $i"<br>
+        done
+      </code>
+      <code>
+        while [ $count -lt 5 ]; do<br>
+          echo "Count is $count"<br>
+          ((count++))<br>
+        done
+      </code>
+      <p>Loops are commonly used to process files, lists, or command outputs.</p>
+    </section>
+    <section class="main-section" id="Functions">
+      <header>Functions</header>
+      <p>Functions in Bash let you group commands for reuse.</p>
+      <p>They are defined using the <span class="highlight">function</span> keyword or just a name followed by parentheses.</p>
+      <code>
+        function greet() {<br>
+          echo "Hello, $1"<br>
+        }
+      </code>
+      <p>Arguments are accessed using <span class="highlight">$1</span>, <span class="highlight">$2</span>, etc., inside the function.</p>
+    </section>
+  </main>
+</body>
+</html>
